@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/oswald_extra_light"
         android:gravity="center"
-        android:text="Локации"
+        android:text="@string/title_locations"
         android:textColor="@color/black"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@+id/logo_imageview"
@@ -34,11 +34,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/shadow"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_imageview"
-        android:elevation="2dp"
-        android:background="@drawable/shadow">
+        app:layout_constraintTop_toBottomOf="@id/logo_imageview">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_right"
@@ -59,22 +59,24 @@
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:background="@drawable/ic_streets_back"
+            android:outlineProvider="bounds"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:outlineProvider="bounds" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/edit_location_main"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:autofillHints="title"
             android:background="@drawable/ic_streets_edittext_background"
             android:gravity="center"
-            android:hint="Улицы"
+            android:hint="@string/streets_edittext_hint"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@id/streets_imageview"
             app:layout_constraintEnd_toEndOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@id/guideline_left"
-            app:layout_constraintTop_toTopOf="@id/streets_imageview"
-            app:layout_constraintBottom_toBottomOf="@id/streets_imageview"/>
+            app:layout_constraintTop_toTopOf="@id/streets_imageview" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
