@@ -36,7 +36,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_imageview">
+        app:layout_constraintTop_toBottomOf="@id/logo_imageview"
+        android:elevation="2dp"
+        android:background="@drawable/shadow">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_right"
@@ -55,7 +57,7 @@
         <ImageView
             android:id="@+id/streets_imageview"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="72dp"
             android:background="@drawable/ic_streets_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
