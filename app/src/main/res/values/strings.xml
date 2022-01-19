@@ -3,4 +3,6 @@
 
     <string name="title_locations">Локации</string>
     <string name="streets_edittext_hint">Улицы</string>
+    <string name="hint_type_elem_title">Название локации</string>
+    <string name="btn_delete_text">Удалить</string>
 </resources>
