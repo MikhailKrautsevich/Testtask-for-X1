@@ -6,6 +6,20 @@
     android:background="@drawable/ic_rec_main_item"
     android:padding="8dp">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/inner_layout"
         android:layout_width="match_parent"
@@ -54,15 +68,15 @@
 
     <Button
         android:id="@+id/delete_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/delete_btn"
+        android:background="@drawable/bg_delete_btn"
+        app:backgroundTint="@color/pink_to_delete_btn"
         android:text="@string/btn_delete_text"
         app:layout_constraintBottom_toBottomOf="@id/inner_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inner_layout">
-
+        app:layout_constraintTop_toBottomOf="@id/inner_layout"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right">
     </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
